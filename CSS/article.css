@@ -1,7 +1,21 @@
+:root {
+    --yb-background-color: #f4955c;
+    --yb-font-color: #313131;
+    --yb-font-color-grey: #878787;
+    --yb-font-color-tag: #133467;
+    --yb-font-color-title: #fff;
+    --yb-body-color: #fff;
+
+    --width-max: 1000px;
+    --width-mat: 800px;
+    --width-mit: 500px;
+    --width-min: 350px;
+}
+
 .a_body {
     position: relative;
     margin: 100px auto;
-    width: 1000px;
+    width: var(--width-max);
 }
 
 .scroll {
@@ -11,9 +25,13 @@
     right: 100px;
 }
 
+.title {
+    height: 250px;
+}
+
 @media screen and (max-width: 1300px){
     .a_body {
-        width: 800px;
+        width: var(--width-mat);
     }
     .scroll {
         right: 50px;
@@ -22,7 +40,7 @@
 
 @media screen and (max-width: 1050px){
     .a_body {
-        width: 500px;
+        width: var(--width-mit);
     }
     .scroll {
         right: 30px;
@@ -35,8 +53,17 @@
     }
 }
 
+@media screen and (max-width: 500px){
+    .a_body {
+        width: var(--width-min);
+    }
+    .title {
+        height: 140px;
+    }
+}
+
 #top {
-    color: #f4955c;
+    color: var(--yb-background-color);
 }
 
 #top:hover {
@@ -50,15 +77,16 @@
 .a_ticket {
     margin: 25px auto;
     text-align: center;
+    font-size: 0.875rem;
 }
 
 .a_ticket a {
     text-decoration: none;
-    color: blue;
+    color: var(--yb-font-color-tag);
 }
 
 .a_content {
-    font-size: 18px;
+    font-size: 1rem;
     font-family: 'PingFang SC','Helvetica Neue','Microsoft YaHei New','STHeiti Light',sans-serif;
 }
 
@@ -79,6 +107,6 @@
     top: 0;
     width: 1%;
     height: 3px;
-    background-color: blue;
+    background-color: var(--yb-font-color);
     z-index: 5;
 }
