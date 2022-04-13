@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font: 16px 'Microsoft YaHei'; */
+}
+
+body {
+    /* background-color: #1d1d1d; */
+    -webkit-font-smoothing: antialiased;
+    /* background-color: #fff3eb; */
+}
+
+/* .mask {
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    background-color: #1d1d1d;
+    z-index: -1;
+} */
+
+.header {
+    display: flex;
+    position: fixed;
+    /* align-items: center; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* height: 50px; */
+    background-color: #f4955c;
+    
+    /* box-shadow: 2px 2px 2px #4f4f4f; */
+    text-align: center;
+    vertical-align: middle;
+    z-index: 3;
+}
+
+.h-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+
+    width: 60%;
+
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+    width: auto;
+}
+
+.nav ul li {
+    display: inline-block;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    /* 这里要设置为内边框，不然会影响到水平居中 */
+    box-sizing: border-box;
+    transition: border-bottom 0.05s linear 0s;
+    border-bottom: 0px solid #313131;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #313131;
+    font-weight: bolder;
+    line-height: 30px;
+}
+
+.nav ul li:hover {
+    border-bottom: 2px solid #313131;
+}
+
+/* .nav ul li {
+    float: left;
+} */
+
+.h-name {
+    margin-right: 30px;
+}
+
+.h-name a {
+    vertical-align: bottom;
+    color: #313131;
+    text-decoration: none;
+    margin-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+/* 在主轴已设置justify-content后可以使用这个方法单独设置一个元素的排列方式 */
+.nav-tail {
+    height: 28px;
+    margin-left: auto;
+    margin-right: 30px;
+    /* padding: 0 5px;
+    border-radius: 8px;
+    border: 2px solid #313131;
+    background-color: #f4955c; */
+}
+
+.search_a:hover {
+    cursor: pointer;
+}
+
+.search_mask {
+    display: none;
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    /* height: 100%; */
+    background-color: #ffffff;
+    z-index: 6;
+}
+
+.search_tag {
+    height: 0;
+    visibility: hidden;
+}
+
+.search_content {
+    margin: 0 auto;
+}
+
+.search_wrapper {
+    margin: 200px auto 20px;
+    padding: 8px 5px 8px 10px;
+    width: 400px;
+    height: 40px;
+    border: 2px solid #878787;
+    border-radius: 10px;
+    /* vertical-align: middle; */
+}
+
+.search_wrapper:focus {
+    border: 2px solid blue;
+}
+
+.search_bar {
+    margin-left: 10px;
+    outline: none;
+    height: 24px;
+    border: 0 solid;
+    font-size: 18px;
+}
+
+.search_result {
+    margin: 0 auto 200px;
+}
+
+.search_result li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.search_result li a {
+    font-size: 24px;
+    /* font-style: underline; */
+    text-decoration: underline;
+}
+
+.search_close {
+    cursor: pointer;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 7;
+}
+
+/* 为了解决输入框输入中文后行高变化而导致高度变化 */
+/* .search_a {
+    display: inline-block;
+    height: 28px;
+    vertical-align: bottom;
+} */
+
+/* .search_bar {
+    width: 20px;
+    height: 28px;
+    transition: width 0.3s;
+    border: 0px solid;
+    background-color: #f4955c;
+}
+
+.search_bar:hover {
+    width: 100px;
+    outline: none;
+}
+
+.search_bar:focus {
+    width: 100px;
+    outline: none;
+} */
+
+.profile {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 0;
+    background-image: url(../images/icon11.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    /* border-radius: 80%;
+    overflow: hidden; */
+}
+
+.blank {
+    height: 200px;
+    /* background-color: white; */
+}
+
+.title {
+    /* margin: 0 auto; */
+    /* float: left; */
+    position: relative;
+    /* vertical-align: middle; */
+    top: 60px;
+    height: 450px;
+    width: 100%;
+    /* margin-top: 200px; */
+    margin: 0px auto 60px;
+    /* padding-top: 75px; */
+    text-align: center;
+    /* background-color: black; */
+    background-image: url(../images/title_black.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-size: cover; */
+    /* -webkit-background-size: cover;
+    -o-background-size: cover; */
+    background-color: #f4955c;
+    color: white;
+}
+
+.title h2,
+h3 {
+    /* display: inline-block; */
+    /* margin-top: 100px; */
+    position: relative;
+    /* margin-top: 300px; */
+    font-family: 'Microsoft YaHei';
+    /* font-weight: lighter; */
+    /* color: white; */
+    z-index: 2;
+    /* text-shadow: 1px 1px 0 white; */
+}
+
+.title h2,
+h3:hover {
+    cursor: default;
+}
+
+.title h3 {
+    margin-top: 15px;
+}
+
+.ticket a {
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    margin: 30px;
+    /* vertical-align: center; */
+    /* float: left; */
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgb(192, 192, 192);
+    border-radius: 50%;
+    background-color: white;
+    color: #121212;
+    text-decoration: none;
+}
+
+/* .header a {
+    display: inline-block;
+    /* float: left; */
+/* margin: 0 50px;
+    width: 50px; */
+/* height: 50px; */
+/* background-color: black; */
+/* text-decoration: none;
+}
+
+.header a:hover {
+    color: black;
+} */
+
+.backgroundText {
+    /* float: left; */
+    position: absolute;
+    font-size: 400px;
+    top: -50%;
+    left: 0;
+    margin: 0 auto;
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.article_block {
+    /* float: left; */
+    position: relative;
+    overflow: hidden;
+    margin: 40px 20px;
+    top: 0;
+    border: 0px solid white;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px 1px rgb(197, 197, 197);
+    transition: all .25s;
+    /* transition: box-shadow .25s; */
+}
+
+.article_block:hover {
+    /* transform: translateY(-5px); */
+    /* cursor: pointer; */
+    top: -2px;
+    box-shadow: 0 3px 8px 8px rgb(197, 197, 197);
+}
+
+.hidden_block {
+    display: none;
+}
+
+.brief_img {
+    display: block;
+    width: 100%;
+    height: 60%;
+}
+
+.brief_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.brief {
+    width: 100%;
+    height: 34%;
+    margin: 3% 10px;
+}
+
+.tag {
+    display: block;
+    height: 20%;
+    font-size: 12px;
+    text-decoration: none;
+    color: #121212;
+}
+
+.brief_title {
+    display: block;
+    height: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    color: #121212;
+}
+
+.brief_time {
+    /* display: block; */
+    height: 20%;
+    font-size: 12px;
+    vertical-align: middle;
+    /* margin-top: 15px; */
+    color: #878787;
+}
+
+/* .brief_time::before {
+    content: "<i class="fa fa-calendar-check-o"></i>";
+    伪元素不能改变dom，所以这种生成标签的方式是行不通的
+} */
+
+.footer {
+    background-color: #f4955c;
+    color: #313131;
+    height: 40px;
+    text-align: center;
+    padding: 50px;
+    /* width: 100%; */
+}
+
+.footer a {
+    text-decoration: none;
+    color: #313131;
+}
+
+.footer a:hover {
+    color: antiquewhite;
+}
+
+#date {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.more {
+    margin: 0 auto 20px;
+    width: 100px;
+    height: 24px;
+    text-align: center;
+    border: 5px solid #f4955c;
+    background-color: #f4955c;
+    color: #313131;
+}
+
+.more:hover {
+    cursor: pointer;
+    /* border: 1px solid white; */
+    background-color: #eee;
+    /* color: #f4955c; */
+}
+
+.nomore {
+    margin: 0 auto 20px;
+    width: 100px;
+    height: 24px;
+    text-align: center;
+    color: #878787;
+}
+
+#waline {
+    margin: 0 auto;
+}

@@ -1,0 +1,84 @@
+.a_body {
+    position: relative;
+    margin: 100px auto;
+    width: 1000px;
+}
+
+.scroll {
+    position: fixed;
+    width: 50px;
+    bottom: 150px;
+    right: 100px;
+}
+
+@media screen and (max-width: 1300px){
+    .a_body {
+        width: 800px;
+    }
+    .scroll {
+        right: 50px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .a_body {
+        width: 500px;
+    }
+    .scroll {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .scroll {
+        right: 0px;
+    }
+}
+
+#top {
+    color: #f4955c;
+}
+
+#top:hover {
+    cursor: pointer;
+}
+
+.a_title {
+    text-align: center;
+}
+
+.a_ticket {
+    margin: 25px auto;
+    text-align: center;
+}
+
+.a_ticket a {
+    text-decoration: none;
+    color: blue;
+}
+
+.a_content {
+    font-size: 18px;
+    font-family: 'PingFang SC','Helvetica Neue','Microsoft YaHei New','STHeiti Light',sans-serif;
+}
+
+.a_content p {
+    text-indent: 2em;
+    margin-bottom: 10px;
+    line-height: 200%;
+}
+
+.a_content strong {
+    text-indent: 2em;
+    margin-bottom: 10px;
+    line-height: 200%;
+}
+
+.scrollTop {
+    position: fixed;
+    top: 0;
+    width: 1%;
+    height: 3px;
+    background-color: blue;
+    z-index: 5;
+}
