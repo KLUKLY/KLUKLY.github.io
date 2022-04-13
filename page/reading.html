@@ -10,6 +10,7 @@
     <script type="text/javascript" src="../JS/ready.js"></script>
     <script type="text/javascript" src="../JS/moreArticles.js"></script>
     <script type="text/javascript" src="../JS/record.js"></script>
+    <script type="text/javascript" src="JS/search.js"></script>
 
     <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../CSS/index.css" media="screen">
@@ -19,6 +20,20 @@
 </head>
 
 <body>
+    <div class="search_mask">
+        <div class="search_tag"></div>
+        <div class="search_content">
+            <div class="search_wrapper">
+                <i class="fa fa-search fa-2x"></i>
+                <input type="text" class="search_bar" placeholder="搜索文章...">
+            </div>
+            <ul class="search_result">
+            </ul>
+        </div>
+        <div class="search_close">
+            <i class="fa fa-times-circle-o fa-4x"></i>
+        </div>
+    </div>
     <header class="header">
         <div class="h-wrapper">
             <div class="h-name"><a href="../index.html">KLUKLY</a></div>
@@ -32,9 +47,7 @@
                 </ul>
             </nav>
             <div class="nav-tail">
-                <button>chaxun
-                </button>
-                <input type="checkbox">
+                <a class="search_a"><i class="fa fa-search"></i></a>
             </div>
         </div>
     </header>
