@@ -13,18 +13,20 @@ $(document).ready(()=>{
         }else if(window.XMLHttpRequest){
             xmlObj = new XMLHttpRequest();
         }
-        xmlObj.open('GET','../feed.xml',true);
-        console.log(xmlObj);
-        xmlObj.onreadystatechange = function(){
-            console.log("2");
-            if(xmlObj.readyState === 4){
-                console.log("3");
-                if(xmlObj.status >= 200 && xmlObj.status <300){
-                    console.log("4");
-                    searchArticles();
-                }
-            }
-        }        
+        $(".search_tag").load('../feed.xml');
+        console.log($(".search_tag"));
+
+        // xmlObj.open('GET','../feed.xml',true);
+        // xmlObj.onreadystatechange = function(){
+        //     console.log("2");
+        //     if(xmlObj.readyState === 4){
+        //         console.log("3");
+        //         if(xmlObj.status >= 200 && xmlObj.status <300){
+        //             console.log("4");
+        //             searchArticles();
+        //         }
+        //     }
+        // }        
     });
 
 
