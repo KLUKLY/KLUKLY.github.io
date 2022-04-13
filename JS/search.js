@@ -6,15 +6,15 @@ $(document).ready(()=>{
         $(".search_mask").css("display","none");
     });
     $(".search_bar").bind("input propertychange", ()=>{
-        console.log("start");
-        var xmlObj = false;
-        if(window.ActiveXObject){
-            xmlObj = new ActiveXObject("Microsoft.XMLHTTP");
-        }else if(window.XMLHttpRequest){
-            xmlObj = new XMLHttpRequest();
-        }
-        $(".search_tag").load('../feed.xml');
-        console.log($(".search_tag"));
+        // console.log("start");
+        // var xmlObj = false;
+        // if(window.ActiveXObject){
+        //     xmlObj = new ActiveXObject("Microsoft.XMLHTTP");
+        // }else if(window.XMLHttpRequest){
+        //     xmlObj = new XMLHttpRequest();
+        // }
+        // // $(".search_tag").load('../feed.xml');
+        // // console.log($(".search_tag"));
 
         // xmlObj.open('GET','../feed.xml',true);
         // xmlObj.onreadystatechange = function(){
@@ -26,19 +26,50 @@ $(document).ready(()=>{
         //             searchArticles();
         //         }
         //     }
-        // }        
+        // }
+
+        $.ajax({
+            url: '../feed.xml',
+            type: 'GET',
+            dataType: 'xml',
+            success:function(xml){
+                var article = $(xml).find('article').text();
+                console.log(article);
+            }
+        })
+
+        // var xmlDoc = getxmlDoc("feed.xml");
+        // var list = xmlDoc.getElementsByTagName("article");
+        // let num = 0;
+        // while(list[num]){
+        //     console.log(list[num].childNodes[0].nodeValue);
+        // }
+
     });
 
+    // function getxmlDoc(xmlFile) {
+    //     var xmlDoc;
+    //     if (window.ActiveXObject) {
+    //         xmlDoc = new ActiveXObject('Microsoft.XMLDOM');//IE
+    //         xmlDoc.async = false;
+    //         xmlDoc.load(xmlFile);
+    //     }
+    //     else if (isFirefox=navigator.userAgent.indexOf("Firefox")>0) { //火狐
 
-    function searchArticles(){
-        var xmlDoc = xmlObj.responseXML;
-        var list = xmlDoc.getElementsByTagName("article");
-        let num = 0;
-        while(list[num]){
-            console.log(list[num].childNodes[0].nodeValue);
-        }
-    }
+    //         xmlDoc = document.implementation.createDocument('', '', null);
+    //         xmlDoc.load(xmlFile);
+    //     }
+    //     else{ //谷歌
+    //       var xmlhttp = new window.XMLHttpRequest();
+    //         xmlhttp.open("GET",xmlFile,false);
+    //         xmlhttp.send(null);
+    //         if(xmlhttp.readyState == 4){
+    //         xmlDoc = xmlhttp.responseXML.documentElement;
+    //         } 
+    //     }
 
+    //     return xmlDoc;
+    // }
 })
 /*
         $(".search_result").html("");
