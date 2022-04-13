@@ -28,6 +28,17 @@
     .header {
         height: 40px;
     }
+    .title {
+        top: 40px;
+        background-image: none;
+        height: 300px;
+    }
+    .profile {
+        top: -40px;
+    }
+    .blank {
+        height: 160px;
+    }
     .h-wrapper {
         width: 500px;
     }
@@ -43,14 +54,47 @@
     #waline {
         width: 500px;
     }
-    .nav-tail {
-        visibility: hidden;
-    }
     .article_block {
         width: 480px;
         height: 360px;
     }
 }
+
+/* @media screen and (max-width: 500px) {
+    .header {
+        height: 40px;
+    }
+    .title {
+        top: 40px;
+        background-image: none;
+        height: 300px;
+    }
+    .profile {
+        top: -40px;
+    }
+    .blank {
+        height: 160px;
+    }
+    .h-wrapper {
+        width: 90%;
+    }
+    .search_content {
+        width: 90%;
+    }
+    .nav ul {
+        visibility: hidden;
+    }
+    .article {
+        width: 90%;
+    }
+    #waline {
+        width: 90%;
+    }
+    .article_block {
+        width: 90%;
+        /* height: 360px; */
+    /* }
+} */ 
 
 @media screen and (min-width: 1300px) {
     .header {
