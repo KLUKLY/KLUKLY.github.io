@@ -129,6 +129,7 @@ body {
 
 .search_wrapper input {
     background-color: var(--yb-body-color);
+    color: var(--yb-font-color);
 }
 
 .search_wrapper:focus-within {
@@ -351,4 +352,9 @@ h4:hover {
 
 #waline {
     margin: 0 auto;
+}
+
+h1 {
+    margin: 50px auto;
+    color:var(--yb-font-color);
 }

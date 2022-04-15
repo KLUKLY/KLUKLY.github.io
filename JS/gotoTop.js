@@ -1,7 +1,7 @@
 $(document).ready(function() {
     //首先将#btn隐藏
     $("#top").hide();
-    console.log("1");
+    // console.log("1");
     //当滚动条的位置处于距顶部50像素以下时，跳转链接出现，否则消失
     $(function() {
       $(window).scroll(function() {

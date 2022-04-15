@@ -8,13 +8,17 @@
 
     <script src="../JS/jquery.js"></script>
     <script type="text/javascript" src="../JS/ready.js"></script>
+    <script type="text/javascript" src="../JS/search.js"></script>
     <script type="text/javascript" src="../JS/moreArticles.js"></script>
     <script type="text/javascript" src="../JS/record.js"></script>
-    <script type="text/javascript" src="JS/search.js"></script>
+    <script type="text/javascript" src="../JS/changeColor.js"></script>
 
-    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/index.css" media="screen">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/light.css" id="light" media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/dark.css" id="dark" media="screen" DISABLED>
     <link rel="stylesheet" type="text/css" href="../CSS/main.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css" media="screen">
 
     <title>友链</title>
 </head>
@@ -31,9 +35,10 @@
             </ul>
         </div>
         <div class="search_close">
-            <i class="fa fa-times-circle-o fa-4x"></i>
+            <i class="far fa-times-circle fa-3x"></i>
         </div>
     </div>
+
     <header class="header">
         <div class="h-wrapper">
             <div class="h-name"><a href="../index.html">KLUKLY</a></div>
@@ -47,6 +52,7 @@
                 </ul>
             </nav>
             <div class="nav-tail">
+                <a class="change_color"><i class="fas fa-adjust"></i></a>
                 <a class="search_a"><i class="fa fa-search"></i></a>
             </div>
         </div>
@@ -54,14 +60,40 @@
     <div class="title">
         <div class="profile" id="profile_"></div>
         <div class="blank"></div>
-        <h2>怕什么真理无穷</h2>
-        <h2>进一寸有一寸的欢喜</h2>
-        <h3>-胡适-</h3>
+        <h3>怕什么真理无穷</h3>
+        <h3>进一寸有一寸的欢喜</h3>
+        <h4>-胡适-</h4>
     </div>
 
-    <!-- <div class="article">
-        目前暂无友链
-    </div> -->
+    <div class="article">
+        <!-- <div class="article_block" id="page1">
+            <a class="brief_img" href="articles/1.html"><img src="images/1.JPG"></a>
+            <div class="brief">
+                <a class="tag" href="page/notes.html">随记</a>
+                <a class="brief_title" href="articles/1.html">关于我开始写博客这件事</a>
+                <span class="brief_time"><i class="fa fa-calendar-check-o"></i>2022-3-19</span>
+            </div>
+        </div>
+        <div class="article_block" id="page2">
+            <a class="brief_img" href="articles/2.html"><img src="images/icon2.JPG"></a>
+            <div class="brief">
+                <a class="tag" href="page/writing.html">写作</a>
+                <a class="brief_title" href="articles/2.html">陌生人的棺材</a>
+                <span class="brief_time"><i class="fa fa-calendar-check-o"></i>2022-4-6</span>
+            </div>
+        </div> -->
+        <h1>欢迎在下方留下友链！</h1>
+
+    </div>
+
+    <script type="text/javascript" src="../JS/client.js"></script>
+    <div id="waline"></div>
+    <script>
+        Waline({
+            el: '#waline',
+            serverURL: 'https://vercel-waline-1mqqnug8t-klukly.vercel.app/',
+        });
+    </script>
 
     <div class="more" onclick="moreArticle()">加载更多</div>
 
