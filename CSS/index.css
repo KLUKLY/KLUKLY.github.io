@@ -56,10 +56,13 @@
     #waline {
         width: var(--width-min);
     }
+    .search_wrapper {
+        width: 300px;
+    }
     .title {
         height: 150px;
     }
-    .title h2,h3 {
+    .title h4,h3 {
         text-align: right;
         margin-right: 5px;
     }

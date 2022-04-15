@@ -1,21 +1,8 @@
-:root {
-    --yb-background-color: #f4955c;
-    --yb-font-color: #313131;
-    --yb-font-color-grey: #878787;
-    --yb-font-color-tag: #133467;
-    --yb-font-color-title: #fff;
-    --yb-body-color: #fff;
-
-    --width-max: 1000px;
-    --width-mat: 800px;
-    --width-mit: 500px;
-    --width-min: 350px;
-}
-
 .a_body {
     position: relative;
     margin: 100px auto;
     width: var(--width-max);
+    color: var(--yb-font-color);
 }
 
 .scroll {
@@ -29,12 +16,23 @@
     height: 250px;
 }
 
+.title_img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 500px;
+}
+
 @media screen and (max-width: 1300px){
     .a_body {
         width: var(--width-mat);
     }
     .scroll {
         right: 50px;
+    }
+    .title_img {
+        height: 450px;
     }
 }
 
@@ -45,11 +43,17 @@
     .scroll {
         right: 30px;
     }
+    .title_img {
+        height: 350px;
+    }
 }
 
 @media screen and (max-width: 650px){
     .scroll {
         right: 0px;
+    }
+    .title_img {
+        height: 250px;
     }
 }
 
@@ -59,6 +63,9 @@
     }
     .title {
         height: 140px;
+    }
+    .title_img {
+        height: 250px;
     }
 }
 

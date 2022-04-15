@@ -1,0 +1,10 @@
+:root {
+    --yb-background-color: rgb(41, 41, 41);
+    --yb-font-color: rgb(224, 224, 224);
+    --yb-font-color-grey: #878787;
+    --yb-font-color-tag: #566782;
+    --yb-font-color-title: #fff;
+    --yb-body-color: #1e1e1e;
+    --yb-block-color: #414141;
+    --yb-shadow-color: #2d2d2d;
+}

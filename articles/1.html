@@ -7,13 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="../JS/jquery.js"></script>
+    <script src="../JS/jquery.cookie.js"></script>
     <script type="text/javascript" src="../JS/gotoTop.js"></script>
     <script type="text/javascript" src="../JS/search.js"></script>
     <script type="text/javascript" src="../JS/record.js"></script>
     <script type="text/javascript" src="../JS/scrolltop.js"></script>
+    <script type="text/javascript" src="../JS/changeColor.js"></script>
+
     <!-- <script type="text/javascript" src="../JS/useValine.js"></script> -->
 
-    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/light.css" id="light" media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/dark.css" id="dark" media="screen" DISABLED>
     <link rel="stylesheet" type="text/css" href="../CSS/main.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../CSS/index.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../CSS/article.css" media="screen">
@@ -32,7 +38,7 @@
             </ul>
         </div>
         <div class="search_close">
-            <i class="fa fa-times-circle-o fa-4x"></i>
+            <i class="far fa-times-circle fa-3x"></i>
         </div>
     </div>
     <div class="scrollTop"></div>
@@ -49,15 +55,17 @@
                 </ul>
             </nav>
             <div class="nav-tail">
+                <a class="change_color"><i class="fas fa-adjust"></i></a>
                 <a class="search_a"><i class="fa fa-search"></i></a>
             </div>
         </div>
     </header>
-    <div class="title"></div>
+    <!-- <div class="title"></div> -->
+    <div class="title_img" style="background-image: url(../images/1.JPG);"></div>
 
     <div class="a_body">
         <div class="scroll">
-            <a id="top"><i class="fa fa-arrow-circle-up fa-3x"></i></a>
+            <a id="top"><i class="fas fa-arrow-circle-up fa-2x"></i></a>
         </div>
         <h1 class="a_title">关于我开始写博客这件事</h1>
         <div class="a_ticket">
