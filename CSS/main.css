@@ -278,8 +278,9 @@ h4:hover {
 }
 
 .tag {
-    display: block;
-    height: 20%;
+    display: inline-block;
+    width: auto;
+    /* height: 15%; */
     font-size: 0.75rem;
     color: var(--yb-font-color-tag);
     text-decoration: none;
@@ -294,7 +295,7 @@ h4:hover {
 }
 
 .brief_time {
-    height: 20%;
+    /* height: 20%; */
     font-size: 0.675rem;
     vertical-align: middle;
     color: var(--yb-font-color-grey);

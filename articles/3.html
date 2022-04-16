@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="../JS/jquery.js"></script>
+    <script type="text/javascript" src="../JS/gotoTop.js"></script>
+    <script type="text/javascript" src="../JS/search.js"></script>
+    <script type="text/javascript" src="../JS/record.js"></script>
+    <script type="text/javascript" src="../JS/scrolltop.js"></script>
+    <script type="text/javascript" src="../JS/changeColor.js"></script>
+
+    <link rel="stylesheet" href="../highlight/styles/github-dark-dimmed.min.css">
+    <script src="../highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/light.css" id="light" media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/dark.css" id="dark" media="screen" DISABLED>
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../CSS/article.css" media="screen">
+
+    <title>使用localStorage实现跨页面全局变量</title>
+</head>
+
+<body>
+    <div class="search_mask">
+        <div class="search_content">
+            <div class="search_wrapper">
+                <i class="fa fa-search fa-2x"></i>
+                <input type="text" class="search_bar" placeholder="搜索文章...">
+            </div>
+            <ul class="search_result">
+            </ul>
+        </div>
+        <div class="search_close">
+            <i class="far fa-times-circle fa-3x"></i>
+        </div>
+    </div>
+    <div class="scrollTop"></div>
+    <header class="header">
+        <div class="h-wrapper">
+            <div class="h-name"><a href="../index.html">KLUKLY</a></div>
+            <nav class="nav">
+                <ul class="nav-li">
+                    <li><a href="../page/notes.html">随记</a></li>
+                    <li><a href="../page/reading.html">阅读</a></li>
+                    <li><a href="../page/writing.html">写作</a></li>
+                    <li><a href="../page/technology.html">技术</a></li>
+                    <li><a href="../page/friends.html">友链</a></li>
+                </ul>
+            </nav>
+            <div class="nav-tail">
+                <a class="change_color"><i class="fas fa-adjust"></i></a>
+                <a class="search_a"><i class="fa fa-search"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- <div class="title"></div> -->
+    <div class="title_img" style="background-image: url(../images/1.JPG);"></div>
+
+    <div class="a_body">
+        <div class="scroll">
+            <a id="top"><i class="fas fa-arrow-circle-up fa-2x"></i></a>
+        </div>
+        <h1 class="a_title">使用localStorage实现跨页面全局变量</h1>
+        <div class="a_ticket">
+            <a href="../page/technology.html">技术</a>
+            | 2022-4-16
+        </div>
+        <div class="a_content">
+            <p>在制作黑暗模式切换的时候使用js将css设置为DISABLED，实现两种样式切换。但遇到了页面间跳转无法保留状态的问题</p>
+            <p>一开始使用jsonp和cookie来解决跨域问题，但都没有解决，偶然发现了localStorage，真的是轻松解决。</p>
+            <p>API链接：
+                <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/localStorage"
+                    target="_blank">Web.localStorage</a>
+            </p>
+            <p>localStorage.setItem('myCat', 'Tom');//设置新的项</p>
+            <p>let cat = localStorage.getItem('myCat');//获取项的值，类型为string</p>
+            <p>localStorage.removeItem('myCat');//移除项</p>
+            <p>localStorage.clear();//清除所有项</p>
+            <p>直接setItem保存信息即可：</p>
+            <pre><code>
+                if(!localStorage.getItem('style')){
+                    if(document.getElementById('dark').disabled){
+                        localStorage.setItem('style','light');
+                    }else{
+                        localStorage.setItem('style','dark');
+                    }
+                }else{
+                    if(localStorage.getItem('style')=='light'){
+                        document.getElementById('light').disabled=false;
+                        document.getElementById('dark').disabled=true;
+                    }else{
+                        document.getElementById('light').disabled=true;
+                        document.getElementById('dark').disabled=false;
+                    }
+                }
+            </code>
+            </pre>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../JS/client.js"></script>
+    <div id="waline"></div>
+    <script>
+        Waline({
+            el: '#waline',
+            serverURL: 'https://vercel-waline-1mqqnug8t-klukly.vercel.app/',
+        });
+    </script>
+
+    <footer class="footer">
+        <div>已记录 <span id="date"></span> 天</div>
+        <div>© 2022 <a href="../index.html">KLUKLY</a></div>
+    </footer>
+</body>
+
+</html>
